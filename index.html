@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doce Imperium</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+--rosa-claro:#fff7fa;
+--rosa-suave:#fde2ea;
+--rosa:#f7c7d9;
+--rosa-destaque:#e89ab8;
+--rosa-escuro:#c76a93;
+--texto:#5c4b51;
+--branco:#fff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--rosa-claro);color:var(--texto)}
+
+header{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(180deg,var(--rosa-suave),var(--rosa-claro));
+}
+
+.logo{
+max-width:220px;
+width:100%;
+}
+
+h1{font-size:3rem;margin-top:15px;color:var(--rosa-escuro)}
+.subtitulo{font-size:1.2rem;margin-top:10px}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+background:linear-gradient(135deg,var(--rosa-destaque),var(--rosa-escuro));
+color:#fff;
+font-weight:bold;
+transition:.3s;
+}
+.btn:hover{transform:translateY(-5px)}
+
+section{padding:80px 8%}
+
+.titulo{
+text-align:center;
+font-size:2rem;
+margin-bottom:50px;
+}
+
+.titulo:after{
+content:'';
+display:block;
+width:80px;
+height:4px;
+background:var(--rosa-escuro);
+margin:10px auto;
+border-radius:10px;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.galeria img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+}
+
+.sobre{
+display:flex;
+align-items:center;
+gap:50px;
+background:#fff;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.sobre img{
+width:320px;
+height:320px;
+object-fit:cover;
+border-radius:25px;
+}
+
+.sobre-texto{flex:1;line-height:1.8}
+
+.avaliacoes{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fff;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.estrelas{
+color:#f7b500;
+font-size:1.2rem;
+margin-bottom:10px;
+}
+
+.instagram{
+text-align:center;
+background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);
+color:#fff;
+padding:50px;
+border-radius:25px;
+}
+
+.instagram i{font-size:60px;margin-bottom:15px}
+
+footer{
+background:var(--rosa-escuro);
+color:#fff;
+padding:30px;
+text-align:center;
+}
+
+footer a{color:#fff;font-weight:bold}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+background:#25d366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#fff;
+font-size:30px;
+text-decoration:none;
+z-index:999;
+}
+
+.animar{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+.animar.mostrar{
+opacity:1;
+transform:translateY(0);
+}
+
+.lightbox{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.85);
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+}
+
+@media(max-width:768px){
+h1{font-size:2rem}
+.sobre{
+flex-direction:column;
+text-align:center;
+}
+.sobre img{
+width:100%;
+max-width:300px;
+height:auto;
+}
+}
+</style>
+</head>
+<body>
+
+<header class="animar">
+<img src="img/logo.png" class="logo" alt="Doce Imperium">
+<h1>Doce Imperium</h1>
+<p class="subtitulo">Bolos • Doces • Kits Festa</p>
+<a href="https://www.instagram.com/docesimperium4991?igsh=MTduYnF6OHRqZ3R1dg==" class="btn">Solicitar Orçamento</a>
+</header>
+
+<section>
+<h2 class="titulo animar">Nossos Produtos</h2>
+<div class="galeria">
+<img src="img/galeria/foto1.jpg" loading="lazy">
+<img src="img/galeria/foto2.jpg" loading="lazy">
+<img src="img/galeria/foto3.jpg" loading="lazy">
+<img src="img/galeria/foto4.jpg" loading="lazy">
+<img src="img/galeria/foto5.jpg" loading="lazy">
+<img src="img/galeria/foto6.jpg" loading="lazy">
+<img src="img/galeria/foto7.jpg" loading="lazy">
+<img src="img/galeria/foto8.jpg" loading="lazy">
+<img src="img/galeria/foto9.jpg" loading="lazy">
+<img src="img/galeria/foto10.jpg" loading="lazy">
+<img src="img/galeria/foto11.jpg" loading="lazy">
+<img src="img/galeria/foto12.jpg" loading="lazy">
+</div>
+</section>
+
+<section>
+<h2 class="titulo animar">Nossa História</h2>
+<div class="sobre animar">
+<img src="img/confeiteira.jpg" alt="Jennifer">
+<div class="sobre-texto">
+<p>
+
+A história da Doces Imperium começou muito antes da sua fundação. Desde criança, fui inspirada pela minha avó, que me ensinou com carinho os segredos da cozinha, compartilhando receitas de doces, bolos e salgados que marcaram minha infância. Foi nesse ambiente cheio de amor, dedicação e sabor que nasceu minha paixão pela confeitaria.
+
+Em 2019, transformei esse sonho em realidade e inaugurei a Doces Imperium em minha própria casa. Desde então, venho me dedicando constantemente ao aperfeiçoamento das minhas técnicas, buscando oferecer produtos de alta qualidade e sabor inesquecível.
+
+Hoje, sou especializada em bolos de chantilly, doces especiais e doces gourmet, produzidos artesanalmente com ingredientes selecionados, cuidado em cada detalhe e muito amor pelo que faço. Cada criação da Doces Imperium carrega um pedacinho da minha história, da tradição que aprendi com minha avó e do compromisso de tornar momentos especiais ainda mais doces.
+
+Doces Imperium transformando amor, tradição e sabor em experiências inesquecíveis. 
+</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="titulo animar">Avaliações dos Clientes</h2>
+<div class="avaliacoes">
+<div class="card"><div class="estrelas">★★★★★</div><h3>Mariana Souza</h3><p>O bolo ficou simplesmente perfeito e delicioso.</p></div>
+<div class="card"><div class="estrelas">★★★★★</div><h3>Fernanda Oliveira</h3><p>Atendimento excelente e entrega rápida.</p></div>
+<div class="card"><div class="estrelas">★★★★★</div><h3>Camila Santos</h3><p>Os doces foram o sucesso da festa.</p></div>
+<div class="card"><div class="estrelas">★★★★★</div><h3>Juliana Costa</h3><p>Capricho em cada detalhe.</p></div>
+</div>
+</section>
+
+<section>
+<div class="instagram animar">
+<i class="fab fa-instagram"></i>
+<h2>@doceimperium4991</h2>
+<br>
+<a class="btn" href="https://www.instagram.com/docesimperium4991?igsh=MTduYnF6OHRqZ3R1dg==">Ver Perfil</a>
+</div>
+</section>
+
+<footer>
+<p>© <span id="ano"></span> Doce Imperium - Todos os direitos reservados</p>
+<p>Desenvolvido por <a href="https://www.instagram.com/rodrigo.passareli?igsh=aTR0NG45djB0bnN6" target="_blank">Rodrigo Passareli</a></p>
+</footer>
+
+<a class="whatsapp" href="https://www.instagram.com/docesimperium4991?igsh=MTduYnF6OHRqZ3R1dg=="><i class="fab fa-whatsapp"></i></a>
+
+<div class="lightbox" id="lightbox">
+<img id="imgExpandida">
+</div>
+
+<script>
+document.getElementById("ano").textContent=new Date().getFullYear();
+
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting)e.target.classList.add("mostrar");
+});
+});
+document.querySelectorAll(".animar").forEach(el=>obs.observe(el));
+
+const lightbox=document.getElementById("lightbox");
+const imgExpandida=document.getElementById("imgExpandida");
+
+document.querySelectorAll(".galeria img").forEach(img=>{
+img.onclick=()=>{
+lightbox.style.display="flex";
+imgExpandida.src=img.src;
+};
+});
+
+lightbox.onclick=()=>lightbox.style.display="none";
+</script>
+
+</body>
+</html>
